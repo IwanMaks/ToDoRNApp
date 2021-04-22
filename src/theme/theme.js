@@ -14,7 +14,7 @@ export const THEME = {
     ascent1_light: '#35C0FF',
     ascent1_dark: '#5BBFED',
     ascent2_light: '#1EE3B3',
-    ascent2_dark: '#56BDA4',
+    ascent2_dark: '#62CCB2',
     ascent3_light: '#FCF324',
     ascent3_dark: '#E7E49E',
     ascent4_light: '#F74A4A',
