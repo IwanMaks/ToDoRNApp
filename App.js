@@ -19,7 +19,10 @@ export default function App() {
     )
   }
   return (
-    <StartScreen/>
+    <>
+      <StartScreen/>
+      {/*<MainScreen/>*/}
+    </>
   );
 }
 
