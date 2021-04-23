@@ -2,9 +2,9 @@ import React from "react";
 import {Text, StyleSheet} from "react-native";
 import {THEME} from "../theme/theme";
 
-export const AppTitle = ({text}) => {
+export const AppTitle = ({text, style}) => {
     return (
-        <Text style={styles.title}>{text}</Text>
+        <Text style={{...styles.title, ...style}}>{text}</Text>
     )
 }
 
