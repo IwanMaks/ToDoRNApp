@@ -3,7 +3,7 @@ import {View, StyleSheet, TouchableNativeFeedback, TouchableOpacity, Text, Image
 import {THEME} from "../theme/theme";
 import {StatusBar} from "expo-status-bar";
 
-export const StartScreen = (props) => {
+export const StartScreen = ({navigation}) => {
     const Wrapper =
         Platform.OS === "android" ? TouchableNativeFeedback : TouchableOpacity;
     return (
@@ -21,7 +21,7 @@ export const StartScreen = (props) => {
                     We make every work for you and your team easy to manage
                     with cool features and interactive interface
                 </Text>
-                <Wrapper activeOpacity={0.7} style={styles.buttonWrapper}>
+                <Wrapper activeOpacity={0.7} style={styles.buttonWrapper} onPress={() => navigation.navigate('Main')}>
                     <View style={styles.buttonStart}>
                         <Text style={styles.buttonText}>Get started</Text>
                     </View>

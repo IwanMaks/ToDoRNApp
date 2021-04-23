@@ -19,7 +19,7 @@ export const Header = () => {
                     <ScheduleIcon />
                 </TouchableOpacity>
                 <TouchableOpacity style={{...styles.headerIcon, ...styles.profile}} activeOpacity={0.7}>
-                    <Image source={require('../../assets/icons/profile.png')} style={{width: 26, height: 26}} />
+                    <Image source={require('../../../assets/icons/profile.png')} style={{width: 26, height: 26}} />
                 </TouchableOpacity>
             </View>
         </View>
