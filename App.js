@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import {MainScreen} from "./src/screens/MainScreen";
 import AppLoading from "expo-app-loading";
 import {bootstrap} from "./src/bootstrap";
+import {StartScreen} from "./src/screens/StartScreen";
 
 export default function App() {
   const [isReady, setIsReady] = useState(false)
@@ -17,9 +18,11 @@ export default function App() {
         />
     )
   }
-
   return (
-    <MainScreen/>
+    <>
+      <StartScreen/>
+      {/*<MainScreen/>*/}
+    </>
   );
 }
 
