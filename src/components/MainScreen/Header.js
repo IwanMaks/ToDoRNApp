@@ -4,7 +4,7 @@ import {THEME} from "../../theme/theme";
 import {ActivityIcon} from "../../ui/icons/ActivityIcon";
 import {ScheduleIcon} from "../../ui/icons/ScheduleIcon";
 
-export const Header = () => {
+export const Header = ({navigation}) => {
     return (
         <View style={styles.header}>
             <View style={styles.mainDate}>
@@ -18,7 +18,7 @@ export const Header = () => {
                 <TouchableOpacity style={{...styles.headerIcon, ...styles.schedules}} activeOpacity={0.7}>
                     <ScheduleIcon />
                 </TouchableOpacity>
-                <TouchableOpacity style={{...styles.headerIcon, ...styles.profile}} activeOpacity={0.7}>
+                <TouchableOpacity style={{...styles.headerIcon, ...styles.profile}} activeOpacity={0.7} onPress={() => navigation.navigate('Profile')}>
                     <Image source={require('../../../assets/icons/profile.png')} style={{width: 26, height: 26}} />
                 </TouchableOpacity>
             </View>
