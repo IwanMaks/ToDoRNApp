@@ -8,10 +8,10 @@ import {AppTitle} from "../../ui/AppTitle";
 export const Tags = () => {
     return (
         <View style={styles.tags}>
-            <AppTitle text='Tag Task' />
+            <AppTitle text='Tag Task' style={{marginBottom: 24}} />
             <View style={styles.tagsContainer}>
                 <TagIcon style={{marginRight: 13.5}} />
-                <ScrollView style={styles.tagsWrapper} horizontal={true}>
+                <ScrollView style={styles.tagsWrapper} horizontal={true} showsHorizontalScrollIndicator={false}>
                     <AppTag />
                     <AppTag tagName='Development' color={THEME.label2_dark} />
                     <AppTag tagName='Testing' color={THEME.label3_dark} />

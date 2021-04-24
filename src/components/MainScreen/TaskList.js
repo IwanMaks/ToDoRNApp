@@ -8,15 +8,15 @@ import {AppTitle} from "../../ui/AppTitle";
 export const TaskList = () => {
     return (
         <View style={styles.tasksList}>
-            <AppTitle text='My Tasks' />
-            <ScrollView style={styles.deadlines} horizontal={true}>
+            <AppTitle text='My Tasks' style={{marginBottom: 23, paddingHorizontal: 24}} />
+            <ScrollView style={styles.deadlines} horizontal={true} showsHorizontalScrollIndicator={false}>
                 <AppDeadline text='Recently' style={{color: THEME.ascent2_dark}} />
                 <AppDeadline style={{color: THEME.textSecondary_dark}}/>
                 <AppDeadline text='Upcoming' style={{color: THEME.textSecondary_dark}}/>
                 <AppDeadline text='Later' style={{color: THEME.textSecondary_dark}}/>
                 <AppDeadline text='Later' style={{color: THEME.textSecondary_dark, marginRight: 0}}/>
             </ScrollView>
-            <ScrollView style={styles.tasks} horizontal={true}>
+            <ScrollView style={styles.tasks} horizontal={true} showsHorizontalScrollIndicator={false}>
                 <Task lineColor={THEME.label1_dark}/>
                 <Task lineColor={THEME.label3_dark}/>
                 <Task lineColor={THEME.label2_dark}/>
@@ -30,15 +30,6 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         width: '100%',
         alignItems: 'flex-start'
-    },
-    tasksTitle: {
-        marginBottom: 24,
-        fontFamily: 'Rubik-Medium',
-        color: THEME.textMain_dark,
-        fontWeight: "500",
-        fontSize: 26,
-        paddingHorizontal: 24,
-        lineHeight: 31
     },
     deadlines: {
         flexDirection: 'row',

@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         height: 73,
         paddingVertical: 26,
         paddingRight: 10,
-        width: '80.2%',
+        width: '86.2%',
         backgroundColor: THEME.componentBcg_dark,
         borderBottomRightRadius: 16,
         borderTopRightRadius: 16,
