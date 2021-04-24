@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         position: 'relative',
         flexDirection: 'row',
         width: 220,
-        marginRight: 18
+        marginLeft: 24
     },
     mainContainer: {
         position: 'relative',

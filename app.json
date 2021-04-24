@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "todo-rn-app",
+    "userInterfaceStyle": "dark",
     "slug": "todo-rn-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#276f62"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
