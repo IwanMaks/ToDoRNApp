@@ -8,7 +8,7 @@ import {TaskInfo} from "../components/MainScreen/TaskInfo";
 import {TaskSearchAndInfo} from "../components/MainScreen/TaskSearchAndAdd";
 import {Header} from "../components/MainScreen/Header";
 
-export const MainScreen = (props) => {
+export const MainScreen = ({navigation}) => {
     return (
         <ScrollView style={styles.mainContainer}>
             <StatusBar style='light'/>
@@ -16,7 +16,7 @@ export const MainScreen = (props) => {
             <TaskSearchAndInfo />
             <TaskInfo />
             <Tags />
-            <TaskList />
+            <TaskList navigation={navigation}/>
         </ScrollView>
     )
 }
