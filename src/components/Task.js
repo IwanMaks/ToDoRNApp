@@ -1,10 +1,11 @@
 import React from "react";
-import {View, StyleSheet, Text} from "react-native";
+import {View, StyleSheet, Text, TouchableOpacity} from "react-native";
 import {THEME} from "../theme/theme";
 
-export const Task = ({lineColor}) => {
+export const Task = ({lineColor, navigation}) => {
+
     return (
-        <View style={styles.taskWrapper}>
+        <TouchableOpacity style={styles.taskWrapper} onPress={() => navigation.navigate('TaskDetails')} activeOpacity={0.7}>
             <View style={{...styles.line, backgroundColor: lineColor}} />
             <View style={styles.mainContainer}>
                 <View style={styles.taskHeader}>
@@ -22,7 +23,7 @@ export const Task = ({lineColor}) => {
                 <Text style={styles.taskTitle}>Design UI</Text>
                 <Text style={styles.taskDescription}>Make ui designs for travel needs with the following goals...</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 

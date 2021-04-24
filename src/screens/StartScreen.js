@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
         height: "100%",
         zIndex: 100,
         position: "absolute",
-        top: 20,
+        top: 10,
         resizeMode: "cover"
     },
     bannerBcg: {
@@ -62,10 +62,10 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 120
     },
     contentWrapper: {
-        paddingTop: 42,
-        paddingBottom: 42,
-        paddingLeft: 24,
-        paddingRight: 24,
+        paddingTop: "8%",
+        paddingBottom: "8%",
+        paddingLeft: "6%",
+        paddingRight: "6%",
         flexDirection: "column",
         justifyContent: "space-between",
         width: "100%"
@@ -76,14 +76,14 @@ const styles = StyleSheet.create({
         fontWeight: "500",
         fontSize: 26,
         lineHeight: 31,
-        paddingBottom: 16
+        paddingBottom: "5%"
     },
     description: {
         color: THEME.textSecondary_dark,
         fontSize: 16,
         lineHeight: 19,
         fontFamily: 'Rubik-Regular',
-        paddingBottom: 36
+        paddingBottom: "12%"
     },
     buttonWrapper: {
         flexDirection: "column",

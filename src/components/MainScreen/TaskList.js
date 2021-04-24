@@ -5,7 +5,7 @@ import {THEME} from "../../theme/theme";
 import {Task} from "../Task";
 import {AppTitle} from "../../ui/AppTitle";
 
-export const TaskList = () => {
+export const TaskList = ({navigation} ) => {
     return (
         <View style={styles.tasksList}>
             <AppTitle text='My Tasks' />
@@ -17,9 +17,9 @@ export const TaskList = () => {
                 <AppDeadline text='Later' style={{color: THEME.textSecondary_dark, marginRight: 0}}/>
             </ScrollView>
             <ScrollView style={styles.tasks} horizontal={true}>
-                <Task lineColor={THEME.label1_dark}/>
-                <Task lineColor={THEME.label3_dark}/>
-                <Task lineColor={THEME.label2_dark}/>
+                <Task lineColor={THEME.label1_dark} navigation={navigation}/>
+                <Task lineColor={THEME.label3_dark} navigation={navigation}/>
+                <Task lineColor={THEME.label2_dark} navigation={navigation}/>
             </ScrollView>
         </View>
     )
