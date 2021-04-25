@@ -9,6 +9,7 @@ import {TaskDetailsScreen} from "./src/screens/TaskDetailsScreen";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import {ProfileScreen} from "./src/screens/ProfileScreen";
+import {ActivityScreen} from "./src/screens/ActivityScreen";
 
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
             <Stack.Screen name="Main" component={MainScreen} options={{headerShown: false}}/>
             <Stack.Screen name="TaskDetails" component={TaskDetailsScreen} options={{headerShown: false}}/>
             <Stack.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}}/>
+            <Stack.Screen name="Activity" component={ActivityScreen} options={{headerShown: false}}/>
         </Stack.Navigator>
     </NavigationContainer>
   );

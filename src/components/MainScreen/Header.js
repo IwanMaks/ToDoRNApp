@@ -12,7 +12,7 @@ export const Header = ({navigation}) => {
                 <Text style={styles.headerToday}>Today</Text>
             </View>
             <View style={styles.headerIconContainer}>
-                <TouchableOpacity style={{...styles.headerIcon, ...styles.activity}} activeOpacity={0.7}>
+                <TouchableOpacity style={{...styles.headerIcon, ...styles.activity}} activeOpacity={0.7} onPress={() => navigation.navigate('Activity')}>
                     <ActivityIcon />
                 </TouchableOpacity>
                 <TouchableOpacity style={{...styles.headerIcon, ...styles.schedules}} activeOpacity={0.7}>
