@@ -15,7 +15,7 @@ export const Header = ({navigation}) => {
                 <TouchableOpacity style={{...styles.headerIcon, ...styles.activity}} activeOpacity={0.7} onPress={() => navigation.navigate('Activity')}>
                     <ActivityIcon />
                 </TouchableOpacity>
-                <TouchableOpacity style={{...styles.headerIcon, ...styles.schedules}} activeOpacity={0.7}>
+                <TouchableOpacity style={{...styles.headerIcon, ...styles.schedules}} activeOpacity={0.7} onPress={() => navigation.navigate('Schedule')}>
                     <ScheduleIcon />
                 </TouchableOpacity>
                 <TouchableOpacity style={{...styles.headerIcon, ...styles.profile}} activeOpacity={0.7} onPress={() => navigation.navigate('Profile')}>
