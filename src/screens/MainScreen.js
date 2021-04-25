@@ -12,7 +12,7 @@ export const MainScreen = ({navigation}) => {
     return (
         <ScrollView style={styles.mainContainer}>
             <StatusBar style='light'/>
-            <Header />
+            <Header navigation={navigation} />
             <TaskSearchAndInfo />
             <TaskInfo />
             <Tags />

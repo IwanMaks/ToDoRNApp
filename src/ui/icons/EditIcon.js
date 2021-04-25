@@ -17,5 +17,5 @@ export const EditIcon = ({width = 14, height = 14, color = '#fff', style = {}}) 
 
             </Svg>
         </View>
-    )
+      )
 }
