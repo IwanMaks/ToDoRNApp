@@ -3,16 +3,16 @@ import {View, StyleSheet, TextInput, TouchableOpacity} from 'react-native'
 import {SearchIcon} from "./icons/SearchIcon";
 import {THEME} from "../theme/theme";
 
-export const AppInput = ({placeholder = 'Find Task...'}) => {
+export const AppInput = ({placeholder = 'Find Task...', styleWrap = {}, styleInput = {}}) => {
     return (
-        <View style={styles.inputContainer}>
+        <View style={{...styles.inputContainer, ...styleWrap}}>
             <TouchableOpacity style={styles.inputIcon} activeOpacity={0.7}>
                 <SearchIcon />
             </TouchableOpacity>
             <TextInput
                 placeholder={placeholder}
                 placeholderTextColor={THEME.textHelping_dark}
-                style={styles.input}
+                style={{...styles.input, ...styleInput}}
             />
         </View>
     )
