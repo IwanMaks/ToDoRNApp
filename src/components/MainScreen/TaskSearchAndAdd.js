@@ -4,11 +4,11 @@ import {THEME} from "../../theme/theme";
 import {AppInput} from "../../ui/AppInput";
 import {AddIcon} from "../../ui/icons/AddIcon";
 
-export const TaskSearchAndInfo = () => {
+export const TaskSearchAndInfo = ({navigation}) => {
     return (
         <View style={styles.inputContainer}>
             <AppInput />
-            <TouchableOpacity style={{...styles.searchIcon, ...styles.add}} activeOpacity={0.7}>
+            <TouchableOpacity style={{...styles.searchIcon, ...styles.add}} activeOpacity={0.7} onPress={() => navigation.navigate('NewTask')}>
                 <AddIcon />
             </TouchableOpacity>
         </View>
