@@ -1,0 +1,77 @@
+{
+  "user": {
+    "name": "Albert Tino",
+    "post": "UI/UX Designer",
+    "photo": "https://get.pxhere.com/photo/person-people-portrait-facial-expression-hairstyle-smile-emotion-portrait-photography-134689.jpg",
+    "settings": {
+      "reminders": "true",
+      "notification": "true",
+      "support": "false",
+      "theme": "dark"
+    },
+    "tags": [
+      {
+        "color": "#4A7AF7",
+        "title": "Design"
+      },
+      {
+        "color": "#714DAC",
+        "title": "UI"
+      },
+      {
+        "color": "#B63692",
+        "title": "UX"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "title": "Travel UI Design Kits",
+      "description": "Make ui designs for travel needs with the following goals listed below, and in a layout style that matches the research data and design inspiration that has been collected.",
+      "deadlines": {
+        "startDay": "23-04-2021",
+        "finishDay": "28-04-2021",
+        "totalDay": 6
+      },
+      "tags": [
+        "Design",
+        "UI"
+      ],
+      "goals": [
+        {
+          "title": "Digitize a sketch made on paper",
+          "done": "false"
+        },
+        {
+          "title": "Create sketch for all page in paper",
+          "done": "true"
+        }
+      ],
+      "status": "To Do"
+    },
+    {
+      "title": "Design UI",
+      "description": "Make ui designs for travel needs with the following goals listed below, and in a layout style that matches the research data and design inspiration that has been collected.",
+      "deadlines": {
+        "startDay": "25-04-2021",
+        "finishDay": "28-04-2021",
+        "totalDay": 4
+      },
+      "tags": [
+        "Design",
+        "UI"
+      ],
+      "goals": [
+        {
+          "title": "Digitize a sketch made on paper",
+          "done": "false"
+        },
+        {
+          "title": "Create sketch for all page in paper",
+          "done": "true"
+        }
+      ],
+      "status": "Done"
+    }
+  ]
+}

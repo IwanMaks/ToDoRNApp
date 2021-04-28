@@ -1,9 +1,9 @@
 import React from "react";
-import {ScrollView, Text, View, StyleSheet} from "react-native";
+import {ScrollView, View, StyleSheet} from "react-native";
 import {AppDeadline} from "../../ui/AppDeadline";
 import {THEME} from "../../theme/theme";
-import {Task} from "../Task";
 import {AppTitle} from "../../ui/AppTitle";
+import {AppTasksList} from "../../ui/AppTasksList";
 
 export const TaskList = ({navigation}) => {
     return (
@@ -16,11 +16,7 @@ export const TaskList = ({navigation}) => {
                 <AppDeadline text='Later' style={{color: THEME.textSecondary_dark}}/>
                 <AppDeadline text='Later' style={{color: THEME.textSecondary_dark, marginRight: 0}}/>
             </ScrollView>
-            <ScrollView style={styles.tasks} horizontal={true} showsHorizontalScrollIndicator={false}>
-                <Task lineColor={THEME.label1_dark} navigation={navigation}/>
-                <Task lineColor={THEME.label3_dark} navigation={navigation}/>
-                <Task lineColor={THEME.label2_dark} navigation={navigation}/>
-            </ScrollView>
+            <AppTasksList navigation={navigation} />
         </View>
     )
 }
@@ -35,8 +31,5 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         paddingHorizontal: 24,
         marginBottom: 24
-    },
-    tasks: {
-        flexDirection: 'row'
     }
 })

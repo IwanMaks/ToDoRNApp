@@ -1,21 +1,24 @@
 import React from 'react'
 import {ScrollView, StyleSheet} from 'react-native'
 import {THEME} from "../theme/theme";
-import {StatusBar} from "expo-status-bar";
 import {TaskList} from "../components/MainScreen/TaskList";
 import {Tags} from "../components/MainScreen/Tags";
 import {TaskInfo} from "../components/MainScreen/TaskInfo";
 import {TaskSearchAndInfo} from "../components/MainScreen/TaskSearchAndAdd";
 import {Header} from "../components/MainScreen/Header";
 
+// TODO: Передавать в Header нынешнюю дату и фото пользователя
+// TODO: Передавать в TaskInfo информацию до статусах задач пользователя
+// TODO: Передавать в Tags информацию о всех тегах
+// TODO: Передавать в TaskList информацию о всех заданиях
+
 export const MainScreen = ({navigation}) => {
     return (
         <ScrollView style={styles.mainContainer}>
-            <StatusBar style='light'/>
             <Header navigation={navigation} />
             <TaskSearchAndInfo navigation={navigation} />
             <TaskInfo />
-            <Tags />
+            <Tags style={{paddingHorizontal: 24, marginBottom: 42}} />
             <TaskList navigation={navigation}/>
         </ScrollView>
     )

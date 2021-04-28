@@ -1,6 +1,5 @@
 import 'react-native-gesture-handler';
 import React, {useState} from 'react';
-import { StyleSheet, View } from 'react-native';
 import {MainScreen} from "./src/screens/MainScreen";
 import AppLoading from "expo-app-loading";
 import {bootstrap} from "./src/bootstrap";

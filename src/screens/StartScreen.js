@@ -1,14 +1,12 @@
 import React from 'react'
 import {View, StyleSheet, TouchableNativeFeedback, TouchableOpacity, Text, Image, Platform} from 'react-native'
 import {THEME} from "../theme/theme";
-import {StatusBar} from "expo-status-bar";
 
 export const StartScreen = ({navigation}) => {
     const Wrapper =
         Platform.OS === "android" ? TouchableNativeFeedback : TouchableOpacity;
     return (
         <View style={styles.container}>
-            <StatusBar style='dark'/>
             <View style={styles.banner}>
                 <Image source={require('../../assets/bannerImg.png')} style={styles.bannerImg} />
                 <View style={styles.bannerBcg}/>
