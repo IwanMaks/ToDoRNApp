@@ -1,12 +1,12 @@
 import React from "react";
-import {StyleSheet, View, TouchableOpacity} from 'react-native'
+import {StyleSheet, TouchableOpacity} from 'react-native'
 import {BackIcon} from "./icons/BackIcon";
 import {THEME} from "../theme/theme";
 
-export const BackButton = ({navigation}) => {
+export const BackButton = ({navigation, style={}}) => {
 
     return (
-        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backWrapper}  activeOpacity={0.7}>
+        <TouchableOpacity onPress={() => navigation.goBack()} style={{...styles.backWrapper, ...style}}  activeOpacity={0.7}>
             <BackIcon />
         </TouchableOpacity>
     )

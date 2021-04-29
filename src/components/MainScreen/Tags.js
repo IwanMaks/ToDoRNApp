@@ -5,10 +5,10 @@ import {TagIcon} from "../../ui/icons/TagIcon";
 import {AppTag} from "../../ui/AppTag";
 import {AppTitle} from "../../ui/AppTitle";
 
-export const Tags = () => {
+export const Tags = ({title = true, textTitle = 'Tag Task', style = {}}) => {
     return (
-        <View style={styles.tags}>
-            <AppTitle text='Tag Task' style={{marginBottom: 24}} />
+        <View style={{...styles.tags, ...style}}>
+            {title ? <AppTitle text={textTitle} style={{marginBottom: 24}} /> : null}
             <View style={styles.tagsContainer}>
                 <TagIcon style={{marginRight: 13.5}} />
                 <ScrollView style={styles.tagsWrapper} horizontal={true} showsHorizontalScrollIndicator={false}>
@@ -27,9 +27,7 @@ export const Tags = () => {
 const styles = StyleSheet.create({
     tags: {
         width: '100%',
-        paddingHorizontal: 24,
         flexDirection: 'column',
-        marginBottom: 42
     },
     tagsTitle: {
         marginBottom: 24,

@@ -1,8 +1,8 @@
 import React from "react";
 import {View, StyleSheet, Text, TouchableOpacity} from "react-native";
-import {THEME} from "../theme/theme";
+import {THEME} from "../../theme/theme";
 
-export const Task = ({lineColor, navigation}) => {
+export const Task = ({lineColor, navigation, tagTitle = 'Design', taskTitle = 'Design UI', taskDescription = 'Make ui designs for travel needs with the following goals...' }) => {
 
     return (
         <TouchableOpacity style={styles.taskWrapper} onPress={() => navigation.navigate('TaskDetails')} activeOpacity={0.7}>
@@ -10,7 +10,7 @@ export const Task = ({lineColor, navigation}) => {
             <View style={styles.mainContainer}>
                 <View style={styles.taskHeader}>
                     <View style={{...styles.tag, backgroundColor: lineColor}}>
-                        <Text style={styles.tagText}>Design</Text>
+                        <Text style={styles.tagText}>{tagTitle}</Text>
                     </View>
                     <View style={styles.team}>
                         <View style={{...styles.human, ...styles.odd}} />
@@ -20,8 +20,8 @@ export const Task = ({lineColor, navigation}) => {
                         <Text style={styles.morePeople}>+4</Text>
                     </View>
                 </View>
-                <Text style={styles.taskTitle}>Design UI</Text>
-                <Text style={styles.taskDescription}>Make ui designs for travel needs with the following goals...</Text>
+                <Text style={styles.taskTitle}>{taskTitle}</Text>
+                <Text style={styles.taskDescription}>{taskDescription}</Text>
             </View>
         </TouchableOpacity>
     )
