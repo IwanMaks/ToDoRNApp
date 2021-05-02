@@ -1,24 +1,26 @@
 import React from "react";
-import {ScrollView, View, StyleSheet} from "react-native";
+import {View, StyleSheet, FlatList} from "react-native";
 import {THEME} from "../../theme/theme";
 import {TagIcon} from "../../ui/icons/TagIcon";
 import {AppTag} from "../../ui/AppTag";
 import {AppTitle} from "../../ui/AppTitle";
+import {useSelector} from "react-redux";
 
 export const Tags = ({title = true, textTitle = 'Tag Task', style = {}}) => {
+    const user = useSelector(state => state.tasks.user)
     return (
         <View style={{...styles.tags, ...style}}>
             {title ? <AppTitle text={textTitle} style={{marginBottom: 24}} /> : null}
             <View style={styles.tagsContainer}>
                 <TagIcon style={{marginRight: 13.5}} />
-                <ScrollView style={styles.tagsWrapper} horizontal={true} showsHorizontalScrollIndicator={false}>
-                    <AppTag />
-                    <AppTag tagName='Development' color={THEME.label2_dark} />
-                    <AppTag tagName='Testing' color={THEME.label3_dark} />
-                    <AppTag tagName='Vector' color={THEME.label4_dark} />
-                    <AppTag tagName='Vector' color={THEME.label4_dark} />
-                    <AppTag tagName='Vector' color={THEME.label4_dark} />
-                </ScrollView>
+                <View style={styles.tagsWrapper}>
+                    <FlatList
+                        data={user.tags}
+                        renderItem={({item}) => <AppTag color={item.color} tagName={item.title} />}
+                        keyExtractor={tag => tag.id.toString()}
+                        horizontal={true}
+                    />
+                </View>
             </View>
         </View>
     )
