@@ -3,12 +3,16 @@ import {Text, View, StyleSheet, TouchableOpacity, Image} from "react-native";
 import {THEME} from "../../theme/theme";
 import {ActivityIcon} from "../../ui/icons/ActivityIcon";
 import {ScheduleIcon} from "../../ui/icons/ScheduleIcon";
+import {formatTime} from "../../secondary";
+import {useSelector} from "react-redux";
 
 export const Header = ({navigation}) => {
+    const user = useSelector(state => state.tasks.user)
+
     return (
         <View style={styles.header}>
             <View style={styles.mainDate}>
-                <Text style={styles.headerDate}>October 22, 2020</Text>
+                <Text style={styles.headerDate}>{formatTime()}</Text>
                 <Text style={styles.headerToday}>Today</Text>
             </View>
             <View style={styles.headerIconContainer}>
@@ -19,7 +23,7 @@ export const Header = ({navigation}) => {
                     <ScheduleIcon />
                 </TouchableOpacity>
                 <TouchableOpacity style={{...styles.headerIcon, ...styles.profile}} activeOpacity={0.7} onPress={() => navigation.navigate('Profile')}>
-                    <Image source={require('../../../assets/icons/profile.png')} style={{width: 26, height: 26}} />
+                    <Image source={{uri: user.photo}} style={{width: 26, height: 26, borderRadius: 50}} />
                 </TouchableOpacity>
             </View>
         </View>
