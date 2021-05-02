@@ -1,15 +1,26 @@
 import React from "react";
-import {ScrollView, StyleSheet} from 'react-native'
+import {View, StyleSheet, FlatList} from 'react-native'
 import {Task} from "../components/MainScreen/Task";
 import {THEME} from "../theme/theme";
+import {useSelector} from "react-redux";
+import {AppTag} from "./AppTag";
 
 export const AppTasksList = ({navigation}) => {
+    const tasks = useSelector(state => state.tasks.tasks);
+
     return (
-        <ScrollView style={styles.tasks} horizontal={true} showsHorizontalScrollIndicator={false}>
-            <Task lineColor={THEME.label1_dark} navigation={navigation}/>
-            <Task lineColor={THEME.label3_dark} navigation={navigation}/>
-            <Task lineColor={THEME.label2_dark} navigation={navigation}/>
-        </ScrollView>
+        <View style={styles.tasks}>
+            <FlatList
+                data={tasks}
+                renderItem={({item}) => (<Task lineColor={item.tags[0].color}
+                                               navigation={navigation}
+                                               tagTitle={item.tags[0].title}
+                                               taskTitle={item.title}
+                                               taskDescription={item.description}/>)}
+                keyExtractor={task => task.id.toString()}
+                horizontal={true}
+            />
+        </View>
     )
 }
 

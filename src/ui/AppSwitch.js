@@ -11,8 +11,8 @@ const types = {
     'help': [<HelpIcon />, 'Help & Support']
 }
 
-export const AppSwitch = ({type}) => {
-    const [on, setOn] = useState(false)
+export const AppSwitch = ({type, init = false}) => {
+    const [on, setOn] = useState(init)
     const toggleSwitch = () => setOn(previousState => !previousState)
 
     return (
@@ -21,7 +21,7 @@ export const AppSwitch = ({type}) => {
                 {types[type][0]}
                 <Text style={styles.title}>{types[type][1]}</Text>
             </View>
-            <Switch value={on} onValueChange={toggleSwitch} />
+            <Switch value={Boolean(on)} onValueChange={toggleSwitch} />
         </View>
     )
 }

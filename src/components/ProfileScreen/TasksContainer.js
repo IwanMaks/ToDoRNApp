@@ -2,15 +2,31 @@ import React from "react";
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native'
 import {AppTasksList} from "../../ui/AppTasksList";
 import {THEME} from "../../theme/theme";
+import {useSelector} from "react-redux";
 
 export const TasksContainer = ({navigation}) => {
+    const tasks = useSelector(state => state.tasks.tasks);
+
+    const setTasksTotal = (tasks) => {
+        const tasksAmount = tasks.length;
+        let taskWord = '';
+
+        if (tasksAmount > 1) {
+            taskWord = 'tasks'
+        } else {
+            taskWord = 'task'
+        }
+
+        return (tasksAmount + ' ' + taskWord );
+    }
+
     return (
         <>
             <View style={styles.tasksContainer}>
                 <View style={styles.textAndLinkWrap}>
                     <View style={styles.textWrap}>
                         <Text style={styles.mainText}>You have total </Text>
-                        <Text style={styles.subText}>6 task</Text>
+                        <Text style={styles.subText}>{setTasksTotal(tasks)}</Text>
                     </View>
                     <TouchableOpacity activeOpacity={0.7}>
                         <Text style={styles.linkText}>SEE ALL</Text>

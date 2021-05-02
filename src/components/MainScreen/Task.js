@@ -21,7 +21,7 @@ export const Task = ({lineColor, navigation, tagTitle = 'Design', taskTitle = 'D
                     </View>
                 </View>
                 <Text style={styles.taskTitle}>{taskTitle}</Text>
-                <Text style={styles.taskDescription}>{taskDescription}</Text>
+                <Text numberOfLines={2} style={styles.taskDescription}>{taskDescription}</Text>
             </View>
         </TouchableOpacity>
     )
@@ -79,7 +79,6 @@ const styles = StyleSheet.create({
         lineHeight: 19
     },
     taskDescription: {
-        height: 34,
         marginBottom: 16,
         fontFamily: 'Rubik-Regular',
         color: THEME.textSecondary_dark,

@@ -5,11 +5,14 @@ import {ProfileHeader} from "../components/ProfileScreen/ProfileHeader";
 import {ProfileAvatar} from "../components/ProfileScreen/ProfileAvatar";
 import {TasksContainer} from "../components/ProfileScreen/TasksContainer";
 import {ButtonsSetting} from "../components/ProfileScreen/ButtonsSetting";
+import {useSelector} from "react-redux";
 
 // TODO: Передавать в ProfileAvatar информацию о пользователе
 // TODO: Передавать в TasksContainer информацию о всех заданиях пользователя
 
 export const ProfileScreen = ({navigation}) => {
+    const user = useSelector(state => state.tasks.user)
+
     return (
         <ScrollView style={styles.mainContainer}>
             <ProfileHeader navigation={navigation} />
