@@ -19,6 +19,7 @@ export const Tags = ({title = true, textTitle = 'Tag Task', style = {}}) => {
                         renderItem={({item}) => <AppTag color={item.color} tagName={item.title} />}
                         keyExtractor={tag => tag.id.toString()}
                         horizontal={true}
+                        showsHorizontalScrollIndicator={false}
                     />
                 </View>
             </View>

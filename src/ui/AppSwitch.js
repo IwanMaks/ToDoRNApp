@@ -4,6 +4,8 @@ import {THEME} from "../theme/theme";
 import {ReminderIcon} from "./icons/ReminderIcon";
 import {NotifIcon} from "./icons/NotifIcon";
 import {HelpIcon} from "./icons/HelpIcon";
+import {useDispatch} from "react-redux";
+import {updateSettings} from "../store/actions/tasks";
 
 const types = {
     'reminders': [<ReminderIcon />,'Reminders'],
@@ -12,8 +14,13 @@ const types = {
 }
 
 export const AppSwitch = ({type, init = false}) => {
+    const dispatch = useDispatch()
     const [on, setOn] = useState(init)
-    const toggleSwitch = () => setOn(previousState => !previousState)
+    const toggleSwitch = () => {
+        setOn(previousState => !previousState)
+
+        dispatch(updateSettings(type, on))
+    }
 
     return (
         <View style={{...styles.switchWrap, backgroundColor: on ? THEME.componentBcg_dark : 'transparent'}}>

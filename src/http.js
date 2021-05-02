@@ -9,6 +9,15 @@ export class Http {
             throw e
         }
     }
+
+    static async patch(url, data = {}) {
+        try {
+            return await request(url, "PATCH", data);
+        } catch (e) {
+            console.log(e);
+            throw e
+        }
+    }
 }
 
 async function request(url, method = "GET", data) {
