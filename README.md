@@ -12,7 +12,8 @@ https://www.figma.com/file/jsTWFojVfTPTsGxQXBnwt7/Task-Management-App-Source?nod
 <br/>
 Открыть приложение в Expo Go: 
 <br/>
-![image](https://user-images.githubusercontent.com/61160887/118709043-2b9de180-b825-11eb-8ff4-d881d2af1f60.png)
+![image](https://user-images.githubusercontent.com/61160887/118709261-6e5fb980-b825-11eb-951a-aef01d461cef.png)
+
 
 ---
 ### Описание:
