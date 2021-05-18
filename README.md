@@ -9,9 +9,10 @@
 Дизайн:
 <br/>
 https://www.figma.com/file/jsTWFojVfTPTsGxQXBnwt7/Task-Management-App-Source?node-id=328%3A265
+<br/>
 Открыть приложение в Expo Go: 
 <br/>
-????????????????/
+![image](https://user-images.githubusercontent.com/61160887/118709043-2b9de180-b825-11eb-8ff4-d881d2af1f60.png)
 
 ---
 ### Описание:
